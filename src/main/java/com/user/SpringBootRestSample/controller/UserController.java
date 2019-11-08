@@ -50,7 +50,6 @@ public class UserController {
 	}
 	
 	@PutMapping("/{id}")
-	@ResponseBody
 	public ResponseEntity<User> updateUser(@PathVariable("id") int id,@RequestBody User userDetails) throws RecordNotFoundException{
 		
 			User updatedUser = service.updateUser(id, userDetails);
